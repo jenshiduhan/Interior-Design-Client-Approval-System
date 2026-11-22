@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Atelier Approve: Interior Design Client Approval System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="w">
+<nav><div class="logo"><i></i>Atelier Approve</div><div><a href="#how">How it works</a><a href="#studio">Review studio</a></div></nav>
+<section class="hero">
+ <div>
+  <h1>Approve every room before the first wall is painted.</h1>
+  <p class="lead">One place for designers and clients to review layouts, materials and color schemes, leave comments, and track each revision.</p>
+  <a class="btn pri" href="#studio">Open review studio</a> <a class="btn" href="#how">See how it works</a>
+ </div>
+ <div class="stage">
+  <svg viewBox="0 0 400 300" role="img" aria-label="Living room preview that changes with the chosen color scheme">
+   <rect class="p" data-k="w" x="0" y="0" width="400" height="210"/>
+   <polygon class="p" data-k="f" points="0,210 400,210 400,300 0,300"/>
+   <rect x="250" y="38" width="112" height="96" rx="4" fill="#fff" stroke="#00000022"/><path d="M306 38v96M250 86h112" stroke="#00000022"/>
+   <rect x="92" y="48" width="92" height="58" fill="#fff" stroke="#00000022"/><rect class="p" data-k="a" x="100" y="56" width="76" height="42"/>
+   <ellipse class="p" data-k="a" cx="150" cy="268" rx="118" ry="16" opacity=".8"/>
+   <rect class="p" data-k="s" x="54" y="124" width="186" height="52" rx="16"/><rect class="p" data-k="s" x="48" y="156" width="198" height="54" rx="14"/>
+   <rect x="64" y="162" width="82" height="30" rx="10" fill="#fff" opacity=".18"/><rect x="152" y="162" width="82" height="30" rx="10" fill="#fff" opacity=".18"/>
+   <path d="M300 214V126" stroke="#2a2a2a" stroke-width="3"/><circle class="p" data-k="a" cx="300" cy="118" r="18"/>
+   <rect class="p" data-k="s" x="338" y="176" width="30" height="36" rx="6"/><ellipse cx="344" cy="168" rx="9" ry="20" fill="#4f8a5b" transform="rotate(-18 344 168)"/><ellipse cx="362" cy="166" rx="9" ry="20" fill="#3f7a4d" transform="rotate(16 362 166)"/>
+  </svg>
+  <div class="chips" id="chips"></div>
+  <div class="cap">Pick a color scheme to preview the room.</div>
+ </div>
+</section>
+</div>
+<section class="how" id="how"><div class="w">
+ <h2 class="big">From first concept to signed-off room.</h2>
+ <div class="steps">
+  <div class="step"><b>1</b><h3>Share options</h3><p>The designer adds layouts, materials and colors for each room.</p></div>
+  <div class="step"><b>2</b><h3>Client reviews</h3><p>Approve, reject or request changes on each option, with comments.</p></div>
+  <div class="step"><b>3</b><h3>Revise and finish</h3><p>Updated versions come back for review until every room is approved.</p></div>
+ </div>
+</div></section>
+<section class="studio" id="studio"><div class="w">
+ <div class="top"><h2 class="big" style="margin:0">Review studio</h2>
+  <div class="seg" role="group" aria-label="View as"><button id="rc" onclick="setRole('client')">Client view</button><button id="rd" onclick="setRole('designer')">Designer view</button></div></div>
+ <div class="prog" id="prog" style="margin-top:22px"></div>
+ <div class="tabs" id="tabs" role="tablist"></div>
+ <div id="main"></div>
+ <div class="log"><b>Activity log</b><ul id="log" style="padding-left:18px;margin:8px 0 0"></ul></div>
+</div></section>
+<footer><div class="w">Atelier Approve, an interior design client approval system.</div></footer>
+<script src="script.js"></script>
+</body>
+</html>
